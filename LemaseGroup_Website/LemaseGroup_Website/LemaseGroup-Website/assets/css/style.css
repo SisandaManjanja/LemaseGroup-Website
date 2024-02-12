@@ -136,6 +136,10 @@ h6 {
   max-height: 40px;
 }
 
+#clients .container h2 {
+  color:#c90202ee  ;
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -799,7 +803,7 @@ section {
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
+.services .icon-box h4 {
   color: #c90202ee;
   transition: ease-in-out 0.3s;
 }
@@ -817,6 +821,7 @@ section {
 .services .icon-box:hover h4 a {
   color: #ee1414;
 }
+
 
 /*--------------------------------------------------------------
 # Cta
