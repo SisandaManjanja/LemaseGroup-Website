@@ -1,0 +1,187 @@
+*{
+    background-color: #444444;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    
+    text-align: center;
+    color: red;
+    padding-bottom: 25px;
+    font-size: 2.5rem;
+    margin-top: 25px;
+
+}
+
+ol {
+    background-color: #444444;
+    color: hsl(0 0% 95%);
+    --ol-padding-block: 2rem;
+    --side-padding: 1rem;
+    --side-number-width: 2.5rem;
+    --side-width: calc(var(--side-number-width) + var(--side-padding) * 2);
+    --li-padding: 1rem;
+    --li-spacing: 1rem;
+    margin: 0;
+    padding-inline-start: var(--side-width);
+    padding-inline-end: var(--side-padding);
+    padding-block: var(--ol-padding-block);
+    display: grid;
+    row-gap: var(--li-spacing);
+    overflow: hidden;
+    position: relative;
+    counter-reset: liCount;
+    list-style: none;
+    margin-left: 200px;
+  }
+  
+  ol::before {
+    content: "";
+    position: absolute;
+    width: var(--side-width);
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 5px 0 20px hsl(0 0% 0% / .5);
+  }
+  
+  ol > li {
+    width: fit-content;
+    padding: var(--li-padding);
+    border-radius: 0.5rem;
+    background-color: var(--accent-color, grey);
+    background-image: linear-gradient(to left, transparent, hsl(0 0% 0% / .5));
+    background-blend-mode: color-burn;
+    --shadow: 2px 2px 5px hsl(0 0% 0% / .5);
+    box-shadow: var(--shadow);
+    position: relative;
+    counter-increment: liCount;
+  }
+  
+  ol > li::before {
+    content: counter(liCount);
+    position: absolute;
+    width: var(--side-number-width);
+    height: 100%;
+    top: 0;
+    right: calc(100% + (var(--side-width) - var(--side-number-width)) / 2);
+    background-color: inherit;
+    background-image: linear-gradient(to right, transparent, hsl(0 0% 0% / .5));
+    background-blend-mode: inherit;
+    border-radius: 0.25rem;
+    box-shadow: inset var(--shadow);
+    display: grid;
+    place-items: center;
+    font-size: 1.5em;
+  }
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    position: relative;
+    padding: 0 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 0;
+    box-shadow: #c90202ee;
+    background-color: #c90202ee;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 31ms cubic-bezier(.5, .7, .4, 1);
+   }
+   
+   button:before {
+    content: attr(alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 4px;
+    opacity: 1;
+   }
+   
+   button:active {
+    box-shadow: none;
+    transform: translateY(7px);
+    transition: 35ms cubic-bezier(.5, .7, .4, 1);
+   }
+   
+   button:hover:before {
+    transition: all .0s;
+    transform: translateY(100%);
+    opacity: 0;
+   }
+   
+   button i {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-style: normal;
+    transition: all 2s ease;
+    transform: translateY(-20px);
+    opacity: 0;
+   }
+   
+   button:hover i {
+    transition: all .2s ease;
+    transform: translateY(0px);
+    opacity: 1;
+   }
+   
+   button:hover i:nth-child(1) {
+    transition-delay: 0.045s;
+   }
+   
+   button:hover i:nth-child(2) {
+    transition-delay: calc(0.045s * 3);
+   }
+   
+   button:hover i:nth-child(3) {
+    transition-delay: calc(0.045s * 4);
+   }
+   
+   button:hover i:nth-child(4) {
+    transition-delay: calc(0.045s * 5);
+   }
+   
+   button:hover i:nth-child(6) {
+    transition-delay: calc(0.045s * 6);
+   }
+   
+   button:hover i:nth-child(7) {
+    transition-delay: calc(0.045s * 7);
+   }
+   
+   button:hover i:nth-child(8) {
+    transition-delay: calc(0.045s * 8);
+   }
+   
+   button:hover i:nth-child(9) {
+    transition-delay: calc(0.045s * 9);
+   }
+   
+   button:hover i:nth-child(10) {
+    transition-delay: calc(0.045s * 10);
+   }
+  
+  /* Added styles for hover effect */
+  ol > li:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+  }
+  
+  /* Added styles to divide the list into two rows */
+  @media (min-width: 768px) {
+    ol {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
