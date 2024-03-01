@@ -322,12 +322,13 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background: #657281fd;
 }
 
 #hero .container {
   padding-top: 72px;
+
 }
 
 #hero h1 {
@@ -569,6 +570,7 @@ section {
 --------------------------------------------------------------*/
 .why-us .content {
   padding: 60px 100px 0 100px;
+
 }
 
 .why-us .content h3 {
@@ -584,8 +586,8 @@ section {
 }
 
 .why-us .content p {
-  font-size: 15px;
-  color: #848484;
+  font-size: 16px;
+  color: #070707;
 }
 
 .why-us .img {
@@ -674,11 +676,18 @@ section {
 
 @media only screen and (max-width: 768px) {
   .content {
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-right: 10rem;
+    margin-left: 30px;
+    margin-right: 50px;
+    padding-right: 40rem;
   }
 }
+
+@media only screen and (max-width: 768px) {
+  .content h3 {
+    text-align: center;
+  }
+}
+
 
 @media only screen and (max-width: 480px) {
   .content {
@@ -687,6 +696,18 @@ section {
     padding-right: 4rem;
   }
 }
+@media only screen and (max-width: 768px) {
+  .content p {
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content p {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
 
   .why-us .content,
@@ -713,6 +734,152 @@ section {
 @media (max-width: 575px) {
   .why-us .img {
     min-height: 200px;
+  }
+}
+
+
+/*-------------------------------------------------------------
+#Service
+---------------------------------------------------------------*/
+
+.service .content {
+  padding: 0px 100px 0 100px;
+  text-align: justify;
+}
+
+.service .content h3 {
+  font-weight: 400;
+  font-size: 34px;
+  color: #c90202ee;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.service .content h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.service .content p {
+  font-size: 15px;
+  color: #848484;
+}
+
+
+.service .accordion-list {
+  padding: 0 100px 60px 100px;
+}
+
+.service .accordion-list ul {
+  padding: 0;
+  list-style: none;
+}
+
+.service .accordion-list li+li {
+  margin-top: 15px;
+}
+
+.service .accordion-list li {
+  padding: 20px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.service .accordion-list a {
+  display: block;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding-right: 30px;
+  outline: none;
+  cursor: pointer;
+}
+
+.service .accordion-list span {
+  color: #ee1414;
+  font-weight: 600;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.service .accordion-list i {
+  font-size: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.service .accordion-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 0;
+}
+
+.service .accordion-list .icon-show {
+  display: none;
+}
+
+.service .accordion-list a.collapsed {
+  color: #343a40;
+}
+
+.service .accordion-list a.collapsed:hover {
+  color: #ee1414;
+}
+
+.service .accordion-list a.collapsed .icon-show {
+  display: inline-block;
+}
+
+.service .accordion-list a.collapsed .icon-close {
+  display: none;
+}
+.content {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-right: 10rem;
+}
+#portfolio p {
+  text-align: justify;
+}
+
+@media only screen and (max-width: 768px) {
+  .content {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 10rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 1024px) {
+
+  .service .content,
+  .service .accordion-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .service .img {
+    min-height: 400px;
+  }
+
+  .service .content {
+    padding-top: 30px;
+  }
+
+  .service .accordion-list {
+    padding-bottom: 30px;
   }
 }
 
@@ -831,7 +998,7 @@ section {
 .cta {
   background: linear-gradient(#657281fd, #657281fd), url("../img/cta-bg.jpg") fixed center center;
   background-size: cover;
-  padding: 120px 0;
+  padding: 10px 0;
 }
 
 .cta h3 {
@@ -842,6 +1009,7 @@ section {
 
 .cta p {
   color: #fff;
+  text-align: justify;
 }
 
 .cta .cta-btn {
