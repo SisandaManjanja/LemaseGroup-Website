@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://lemase-group.com/</loc> <!-- Homepage -->
+    </url>
+    <url>
+        <loc>https://lemase-group.com/about</loc> <!-- About Page -->
+    </url>
+    <url>
+        <loc>https://lemase-group.com/service</loc> <!-- Service Page -->
+    </url>
+    <url>
+        <loc>https://lemase-group.com/services</loc> <!-- Services Page -->
+    </url>
+    <url>
+        <loc>https://lemase-group.com/portfolio</loc> <!-- Portfolio Page -->
+    </url>
+    <url>
+        <loc>https://lemase-group.com/contact</loc> <!-- Contact Page -->
+    </url>
+</urlset>
